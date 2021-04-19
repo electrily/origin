@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { TopBar, NavBar, ErrorFallback } from '@energyweb/origin-ui-core';
 import { ErrorBoundary } from 'react-error-boundary';
 import { OriginGlobalStyles } from './OriginGlobalStyles';
+import { QueryClientProvider } from 'react-query';
+import { AuthProvider } from '../../../../libs/ui/api-clients/src/providers/auth.provider';
+import { OriginQueryClientProvider } from '../../../../libs/ui/api-clients/src/providers/originQueryClient.provider';
 
 export function App() {
   // Mock
@@ -75,15 +78,19 @@ export function App() {
 
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
-      <OriginGlobalStyles />
-      <TopBar buttons={buttons} onMobileNavOpen={() => setnav(true)} />
-      <NavBar
-        openMobile={mobilenav}
-        onMobileClose={() => setnav(false)}
-        menuSections={menuSections}
-        userData={userData}
-        orgData={orgData}
-      />
+      <OriginQueryClientProvider>
+        <AuthProvider initialState={null}>
+          <OriginGlobalStyles />
+          <TopBar buttons={buttons} onMobileNavOpen={() => setnav(true)} />
+          <NavBar
+            openMobile={mobilenav}
+            onMobileClose={() => setnav(false)}
+            menuSections={menuSections}
+            userData={userData}
+            orgData={orgData}
+          />
+        </AuthProvider>
+      </OriginQueryClientProvider>
     </ErrorBoundary>
   );
 }
