@@ -23,7 +23,8 @@
         "client:clean": "find src/ -type f  ! -name \"*.ts\"  -delete"
     },
     "dependencies": {
-        "axios": "0.21.1"
+        "axios": "0.21.1",
+        "react-query": "3.13.11"
     },
     "devDependencies": {
         "typescript": "4.1.5",
@@ -37,7 +38,9 @@
         "ts-node": "9.1.1",
         "@types/mocha": "8.2.2",
         "@types/node": "14.14.37",
-        "mocha": "8.3.2"
+        "mocha": "8.3.2",
+        "orval": "5.0.0-alpha.9",
+        "@types/faker": "5.5.3"
     },
     "publishConfig": {
         "access": "public",
