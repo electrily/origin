@@ -30,6 +30,7 @@ dependencies:
   '@openapitools/openapi-generator-cli': 2.2.5_07e7adf43d3e7d4ab61b21bed939c8a8
   '@openzeppelin/cli': 2.8.2
   '@openzeppelin/contracts-ethereum-package': 2.5.0_@openzeppelin+upgrades@2.8.0
+  '@openzeppelin/contracts-upgradeable': 4.0.0
   '@openzeppelin/upgrades': 2.8.0
   '@react-google-maps/api': 2.1.1_react-dom@17.0.2+react@17.0.2
   '@rush-temp/device-registry': file:projects/device-registry.tgz
@@ -207,7 +208,6 @@ dependencies:
   rxjs: 6.6.7
   sass-loader: 11.0.1_node-sass@5.0.0+webpack@5.33.2
   shx: 0.3.3
-  solc: 0.5.16
   source-map-loader: 2.0.1_webpack@5.33.2
   stream-browserify: 3.0.0
   stream-http: 3.2.0
@@ -4094,6 +4094,10 @@ packages:
       '@openzeppelin/upgrades': ^2.5.0
     resolution:
       integrity: sha512-14CijdTyy4Y/3D3UUeFC2oW12nt1Yq1M8gFOtkuODEvSYPe3YSAKnKyhUeGf0UDNCZzwfGr15KdiFK6AoJjoSQ==
+  /@openzeppelin/contracts-upgradeable/4.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-T5tO/KD++m+Ph74ppPPmNuhyrvNcsMDgQWt+pGshNJMsTf9UvmhBNyyOqVAL91UeuqDI0FHAbBV1+NnMg7ffFA==
   /@openzeppelin/fuzzy-solidity-import-parser/0.1.2:
     dev: false
     resolution:
@@ -25519,6 +25523,23 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-weEtRtisJyf+8UjELs7S4ST1KK7UIq6SRB7tpprfJBL9b5mTrZAT7m4gJKi2h6MiBpuSWfnraK8BnkyWzuTMRA==
+  /solc/0.8.4:
+    dependencies:
+      command-exists: 1.2.9
+      commander: 3.0.2
+      follow-redirects: 1.13.3
+      fs-extra: 0.30.0
+      js-sha3: 0.8.0
+      memorystream: 0.3.1
+      require-from-string: 2.0.2
+      semver: 5.7.1
+      tmp: 0.0.33
+    dev: false
+    engines:
+      node: '>=8.0.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-krEdbucX9yY362l79gXTK2UHhsZ02aQjQOYTzcgTd/waApueo3yWGzjX0CDJ1ByOuW46WuKAyzfbRWdFNr6OYQ==
   /solium-plugin-security/0.1.1:
     dev: false
     peerDependencies:
@@ -31169,6 +31190,7 @@ packages:
       '@ethersproject/providers': 5.1.0
       '@openzeppelin/cli': 2.8.2
       '@openzeppelin/contracts-ethereum-package': 2.5.0_@openzeppelin+upgrades@2.8.0
+      '@openzeppelin/contracts-upgradeable': 4.0.0
       '@openzeppelin/upgrades': 2.8.0
       '@typechain/ethers-v5': 1.0.0_typechain@4.0.3
       '@types/chai': 4.2.15
@@ -31184,7 +31206,7 @@ packages:
       moment: 2.29.1
       precise-proofs-js: 1.2.0
       shx: 0.3.3
-      solc: 0.5.16
+      solc: 0.8.4
       truffle: 5.3.2_react@17.0.2
       truffle-typings: 1.0.8
       ts-node: 9.1.1_typescript@4.2.4
@@ -31198,7 +31220,7 @@ packages:
     peerDependencies:
       react: '*'
     resolution:
-      integrity: sha512-FOc+/5FHO91jKsHh0nZo8a/BscZ3wRmM1X0EJ2ZXVs9jziXy+k2dplLLk46VtI/fX/KeCkQQYngyDb/RYIX5uQ==
+      integrity: sha512-2SQm6OZe56hIcU/VVDOvRgewRdKTn7wV7t+eewGGZ7K0XqkaaHTauFoylWEPwhLLId5Tt0Bfy4A/C6+Aosfe8Q==
       tarball: file:projects/issuer.tgz
     version: 0.0.0
   file:projects/localization.tgz:
@@ -32198,6 +32220,7 @@ specifiers:
   '@openapitools/openapi-generator-cli': 2.2.5
   '@openzeppelin/cli': 2.8.2
   '@openzeppelin/contracts-ethereum-package': 2.5.0
+  '@openzeppelin/contracts-upgradeable': 4.0.0
   '@openzeppelin/upgrades': 2.8.0
   '@react-google-maps/api': 2.1.1
   '@rush-temp/device-registry': file:./projects/device-registry.tgz
@@ -32375,7 +32398,6 @@ specifiers:
   rxjs: 6.6.7
   sass-loader: 11.0.1
   shx: 0.3.3
-  solc: 0.5.16
   source-map-loader: 2.0.1
   stream-browserify: 3.0.0
   stream-http: 3.2.0
